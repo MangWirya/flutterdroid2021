@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_progmob_2021/pertemuan1.dart';
+import 'package:flutter_progmob_2021/dshboard.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if(isLogin == 1){
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Pertemuan1(title: "Halo Push")),
+        MaterialPageRoute(builder: (context) => Dshboard(title: "Dashboard")),
       );
     }
   }
@@ -111,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
              await prefs.setInt("is_login", 1);
              Navigator.pushReplacement(
                context,
-               MaterialPageRoute(builder: (context) => Pertemuan1(title: "Halo Push")),
+               MaterialPageRoute(builder: (context) => Dshboard(title: "Dashboard")),
              );
            }, child: Text(
                'Login'
